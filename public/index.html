@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐치! 월곡 체육핑!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dday"><i class="fas fa-clock"></i> <span id="dday"></span></div>
+        <h1><span class="subtitle">3학년배</span> 캐치! 월곡 체육핑!</h1>
+        
+        <div class="main-buttons">
+            <button id="showLeaderboard" class="active">전체 순위</button>
+            <button id="showGames">경기별</button>
+        </div>
+
+        <div id="leaderboard">
+            <div class="podium">
+                <div class="podium-item" id="second-place">
+                    <div class="avatar">2</div>
+                    <div class="podium-info">
+                        <div class="podium-class"></div>
+                        <div class="podium-points"></div>
+                    </div>
+                </div>
+                <div class="podium-item" id="first-place">
+                    <div class="avatar">1</div>
+                    <div class="podium-info">
+                        <div class="podium-class"></div>
+                        <div class="podium-points"></div>
+                    </div>
+                </div>
+                <div class="podium-item" id="third-place">
+                    <div class="avatar">3</div>
+                    <div class="podium-info">
+                        <div class="podium-class"></div>
+                        <div class="podium-points"></div>
+                    </div>
+                </div>
+            </div>
+            <table id="leaderboardTable">
+                <thead>
+                    <tr>
+                        <th>순위</th>
+                        <th>반</th>
+                        <th>점수</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboardBody"></tbody>
+            </table>
+        </div>
+
+        <div id="gamesList" style="display: none;">
+            <div id="gameList"></div>
+        </div>
+    </div>
+
+    <div class="action-buttons">
+        <button id="editButton" class="action-button"><i class="fas fa-edit"></i></button>
+    </div>
+
+    <script>
+        // 백엔드 URL을 환경 변수로 설정
+        window.BACKEND_URL = 'https://port-0-pecompitition-m2hdcunvd166f935.sel4.cloudtype.app';
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
